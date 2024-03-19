@@ -215,7 +215,6 @@ public class dataBarang extends javax.swing.JDialog {
         labelKategori = new javax.swing.JLabel();
         labelKeterangan = new javax.swing.JLabel();
         txtKodePart = new javax.swing.JTextField();
-        btnPilihTanggal = new com.toedter.calendar.JDateChooser();
         txtNamaPart = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -244,6 +243,7 @@ public class dataBarang extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tabelKategori = new javax.swing.JTable();
+        btnPilihTanggal = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -251,7 +251,7 @@ public class dataBarang extends javax.swing.JDialog {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        panelHeader.setBackground(new java.awt.Color(204, 102, 255));
+        panelHeader.setBackground(new java.awt.Color(209, 17, 17));
         panelHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 panelHeaderMouseDragged(evt);
@@ -263,7 +263,7 @@ public class dataBarang extends javax.swing.JDialog {
             }
         });
 
-        btnClose.setBackground(new java.awt.Color(204, 102, 255));
+        btnClose.setBackground(new java.awt.Color(209, 17, 17));
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Delete_30px_4.png"))); // NOI18N
         btnClose.setContentAreaFilled(false);
         btnClose.setOpaque(true);
@@ -282,6 +282,7 @@ public class dataBarang extends javax.swing.JDialog {
             }
         });
 
+        labelNama.setBackground(new java.awt.Color(209, 17, 17));
         labelNama.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         labelNama.setForeground(new java.awt.Color(255, 255, 255));
         labelNama.setText("Data Barang");
@@ -334,20 +335,6 @@ public class dataBarang extends javax.swing.JDialog {
         txtKodePart.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtKodePartKeyPressed(evt);
-            }
-        });
-
-        btnPilihTanggal.setDateFormatString("dd-MM-yyyy");
-        btnPilihTanggal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnPilihTanggal.setMaximumSize(new java.awt.Dimension(2147400000, 2147400000));
-        btnPilihTanggal.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnPilihTanggalMouseClicked(evt);
-            }
-        });
-        btnPilihTanggal.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btnPilihTanggalKeyPressed(evt);
             }
         });
 
@@ -616,6 +603,20 @@ public class dataBarang extends javax.swing.JDialog {
         });
         jScrollPane5.setViewportView(tabelKategori);
 
+        btnPilihTanggal.setDateFormatString("dd-MM-yyyy");
+        btnPilihTanggal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnPilihTanggal.setMaximumSize(new java.awt.Dimension(2147400000, 2147400000));
+        btnPilihTanggal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPilihTanggalMouseClicked(evt);
+            }
+        });
+        btnPilihTanggal.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btnPilihTanggalKeyPressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -644,11 +645,11 @@ public class dataBarang extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnPilihTanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtKodePart)
                                 .addComponent(txtNamaPart)
                                 .addComponent(txtKategoriPart)
-                                .addComponent(txtJumlah))
+                                .addComponent(txtJumlah)
+                                .addComponent(btnPilihTanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()

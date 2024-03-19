@@ -62,9 +62,9 @@ public class menuUtama extends javax.swing.JFrame {
         panelUtama = new javax.swing.JPanel();
         panelHeader = new javax.swing.JPanel();
         btnClose = new javax.swing.JButton();
-        labelNama = new javax.swing.JLabel();
         btnMaximize = new javax.swing.JButton();
         btnMinimize = new javax.swing.JButton();
+        labelNama = new javax.swing.JLabel();
         panelMenu = new javax.swing.JPanel();
         btnMasterData = new javax.swing.JButton();
         btnTransaksi = new javax.swing.JButton();
@@ -99,9 +99,9 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        panelHeader.setBackground(new java.awt.Color(102, 0, 153));
+        panelHeader.setBackground(new java.awt.Color(209, 17, 17));
 
-        btnClose.setBackground(new java.awt.Color(102, 0, 153));
+        btnClose.setBackground(new java.awt.Color(209, 17, 17));
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Delete_30px_4.png"))); // NOI18N
         btnClose.setContentAreaFilled(false);
         btnClose.setOpaque(true);
@@ -117,21 +117,6 @@ public class menuUtama extends javax.swing.JFrame {
         btnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCloseActionPerformed(evt);
-            }
-        });
-
-        labelNama.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        labelNama.setForeground(new java.awt.Color(255, 255, 255));
-        labelNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelNama.setText("Aplikasi Inventory Barang PT Focon Indo Beton");
-        labelNama.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                labelNamaMouseDragged(evt);
-            }
-        });
-        labelNama.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                labelNamaMousePressed(evt);
             }
         });
 
@@ -158,13 +143,29 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
+        labelNama.setBackground(new java.awt.Color(209, 17, 17));
+        labelNama.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        labelNama.setForeground(new java.awt.Color(255, 255, 255));
+        labelNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelNama.setText("Aplikasi Inventory Barang IMK Corp");
+        labelNama.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                labelNamaMouseDragged(evt);
+            }
+        });
+        labelNama.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                labelNamaMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelHeaderLayout = new javax.swing.GroupLayout(panelHeader);
         panelHeader.setLayout(panelHeaderLayout);
         panelHeaderLayout.setHorizontalGroup(
             panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHeaderLayout.createSequentialGroup()
                 .addComponent(labelNama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnMinimize, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnMaximize, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,16 +177,19 @@ public class menuUtama extends javax.swing.JFrame {
             .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
             .addComponent(btnMaximize, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnMinimize, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(labelNama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelNama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        panelMenu.setBackground(new java.awt.Color(0, 0, 204));
+        panelMenu.setBackground(new java.awt.Color(209, 17, 17));
 
-        btnMasterData.setBackground(new java.awt.Color(0, 0, 204));
+        btnMasterData.setBackground(new java.awt.Color(209, 17, 17));
         btnMasterData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnMasterData.setForeground(new java.awt.Color(255, 255, 255));
         btnMasterData.setText("  Master Data");
-        btnMasterData.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnMasterData.setBorder(null);
         btnMasterData.setContentAreaFilled(false);
         btnMasterData.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMasterData.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -202,12 +206,17 @@ public class menuUtama extends javax.swing.JFrame {
                 btnMasterDataMouseExited(evt);
             }
         });
+        btnMasterData.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMasterDataActionPerformed(evt);
+            }
+        });
 
-        btnTransaksi.setBackground(new java.awt.Color(0, 0, 204));
+        btnTransaksi.setBackground(new java.awt.Color(209, 17, 17));
         btnTransaksi.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnTransaksi.setForeground(new java.awt.Color(255, 255, 255));
         btnTransaksi.setText("  Transaksi");
-        btnTransaksi.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnTransaksi.setBorder(null);
         btnTransaksi.setContentAreaFilled(false);
         btnTransaksi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTransaksi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -224,12 +233,17 @@ public class menuUtama extends javax.swing.JFrame {
                 btnTransaksiMouseExited(evt);
             }
         });
+        btnTransaksi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTransaksiActionPerformed(evt);
+            }
+        });
 
-        btnLaporan.setBackground(new java.awt.Color(0, 0, 204));
+        btnLaporan.setBackground(new java.awt.Color(209, 17, 17));
         btnLaporan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLaporan.setForeground(new java.awt.Color(255, 255, 255));
         btnLaporan.setText("  Laporan");
-        btnLaporan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnLaporan.setBorder(null);
         btnLaporan.setContentAreaFilled(false);
         btnLaporan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLaporan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -249,13 +263,13 @@ public class menuUtama extends javax.swing.JFrame {
 
         panelJam.setBackground(new java.awt.Color(0, 0, 204));
 
-        tgl.setBackground(new java.awt.Color(0, 0, 204));
+        tgl.setBackground(new java.awt.Color(209, 17, 17));
         tgl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         tgl.setForeground(new java.awt.Color(255, 255, 255));
         tgl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tgl.setOpaque(true);
 
-        jam.setBackground(new java.awt.Color(0, 0, 204));
+        jam.setBackground(new java.awt.Color(209, 17, 17));
         jam.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jam.setForeground(new java.awt.Color(255, 255, 255));
         jam.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -281,7 +295,7 @@ public class menuUtama extends javax.swing.JFrame {
         jam.setText(new WaktuSekarang().getWkt());
         jam.setPreferredSize(new java.awt.Dimension(100,22));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setBackground(new java.awt.Color(209, 17, 17));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -294,11 +308,11 @@ public class menuUtama extends javax.swing.JFrame {
             .addGap(0, 88, Short.MAX_VALUE)
         );
 
-        btnAbout.setBackground(new java.awt.Color(0, 0, 204));
+        btnAbout.setBackground(new java.awt.Color(209, 17, 17));
         btnAbout.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnAbout.setForeground(new java.awt.Color(255, 255, 255));
         btnAbout.setText("  About");
-        btnAbout.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnAbout.setBorder(null);
         btnAbout.setContentAreaFilled(false);
         btnAbout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAbout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -346,7 +360,7 @@ public class menuUtama extends javax.swing.JFrame {
                 .addComponent(btnLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(panelJam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -354,11 +368,11 @@ public class menuUtama extends javax.swing.JFrame {
 
         panelMasterData.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnDataBarang.setBackground(new java.awt.Color(0, 0, 204));
+        btnDataBarang.setBackground(new java.awt.Color(209, 17, 17));
         btnDataBarang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDataBarang.setForeground(new java.awt.Color(255, 255, 255));
         btnDataBarang.setText("  > Data Barang");
-        btnDataBarang.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnDataBarang.setBorder(null);
         btnDataBarang.setContentAreaFilled(false);
         btnDataBarang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDataBarang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -378,11 +392,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnDataSupplier.setBackground(new java.awt.Color(0, 0, 204));
+        btnDataSupplier.setBackground(new java.awt.Color(209, 17, 17));
         btnDataSupplier.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDataSupplier.setForeground(new java.awt.Color(255, 255, 255));
         btnDataSupplier.setText("  > Data Supplier");
-        btnDataSupplier.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnDataSupplier.setBorder(null);
         btnDataSupplier.setContentAreaFilled(false);
         btnDataSupplier.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDataSupplier.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -402,11 +416,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnDataGudang.setBackground(new java.awt.Color(0, 0, 204));
+        btnDataGudang.setBackground(new java.awt.Color(209, 17, 17));
         btnDataGudang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDataGudang.setForeground(new java.awt.Color(255, 255, 255));
         btnDataGudang.setText("  > Data Gudang");
-        btnDataGudang.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnDataGudang.setBorder(null);
         btnDataGudang.setContentAreaFilled(false);
         btnDataGudang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDataGudang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -426,11 +440,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnDataKategori.setBackground(new java.awt.Color(0, 0, 204));
+        btnDataKategori.setBackground(new java.awt.Color(209, 17, 17));
         btnDataKategori.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDataKategori.setForeground(new java.awt.Color(255, 255, 255));
         btnDataKategori.setText("  > Data Kategori");
-        btnDataKategori.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnDataKategori.setBorder(null);
         btnDataKategori.setContentAreaFilled(false);
         btnDataKategori.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDataKategori.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -474,11 +488,11 @@ public class menuUtama extends javax.swing.JFrame {
 
         panelTransaksi.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnBarangMasuk.setBackground(new java.awt.Color(0, 0, 204));
+        btnBarangMasuk.setBackground(new java.awt.Color(209, 17, 17));
         btnBarangMasuk.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBarangMasuk.setForeground(new java.awt.Color(255, 255, 255));
         btnBarangMasuk.setText("  > Barang Masuk");
-        btnBarangMasuk.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnBarangMasuk.setBorder(null);
         btnBarangMasuk.setContentAreaFilled(false);
         btnBarangMasuk.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBarangMasuk.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -498,11 +512,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnBarangKeluar.setBackground(new java.awt.Color(0, 0, 204));
+        btnBarangKeluar.setBackground(new java.awt.Color(209, 17, 17));
         btnBarangKeluar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnBarangKeluar.setForeground(new java.awt.Color(255, 255, 255));
         btnBarangKeluar.setText("  > Barang Keluar");
-        btnBarangKeluar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnBarangKeluar.setBorder(null);
         btnBarangKeluar.setContentAreaFilled(false);
         btnBarangKeluar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBarangKeluar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -539,11 +553,11 @@ public class menuUtama extends javax.swing.JFrame {
 
         panelLaporan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btnLapBarangMasuk.setBackground(new java.awt.Color(0, 0, 204));
+        btnLapBarangMasuk.setBackground(new java.awt.Color(209, 17, 17));
         btnLapBarangMasuk.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLapBarangMasuk.setForeground(new java.awt.Color(255, 255, 255));
         btnLapBarangMasuk.setText("  > Laporan Barang Masuk");
-        btnLapBarangMasuk.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnLapBarangMasuk.setBorder(null);
         btnLapBarangMasuk.setContentAreaFilled(false);
         btnLapBarangMasuk.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLapBarangMasuk.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -563,11 +577,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnLapBarangKeluar.setBackground(new java.awt.Color(0, 0, 204));
+        btnLapBarangKeluar.setBackground(new java.awt.Color(209, 17, 17));
         btnLapBarangKeluar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLapBarangKeluar.setForeground(new java.awt.Color(255, 255, 255));
         btnLapBarangKeluar.setText("  > Laporan Barang Keluar");
-        btnLapBarangKeluar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnLapBarangKeluar.setBorder(null);
         btnLapBarangKeluar.setContentAreaFilled(false);
         btnLapBarangKeluar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLapBarangKeluar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -587,11 +601,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnLapStokBarang.setBackground(new java.awt.Color(0, 0, 204));
+        btnLapStokBarang.setBackground(new java.awt.Color(209, 17, 17));
         btnLapStokBarang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLapStokBarang.setForeground(new java.awt.Color(255, 255, 255));
         btnLapStokBarang.setText("  > Laporan Stok Barang");
-        btnLapStokBarang.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnLapStokBarang.setBorder(null);
         btnLapStokBarang.setContentAreaFilled(false);
         btnLapStokBarang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLapStokBarang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -611,11 +625,11 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnLapDataSupplier.setBackground(new java.awt.Color(0, 0, 204));
+        btnLapDataSupplier.setBackground(new java.awt.Color(209, 17, 17));
         btnLapDataSupplier.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLapDataSupplier.setForeground(new java.awt.Color(255, 255, 255));
         btnLapDataSupplier.setText("  > Laporan Data Supplier");
-        btnLapDataSupplier.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnLapDataSupplier.setBorder(null);
         btnLapDataSupplier.setContentAreaFilled(false);
         btnLapDataSupplier.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLapDataSupplier.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -673,6 +687,7 @@ public class menuUtama extends javax.swing.JFrame {
             panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelUtamaLayout.createSequentialGroup()
                 .addComponent(panelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelUtamaLayout.createSequentialGroup()
@@ -681,7 +696,7 @@ public class menuUtama extends javax.swing.JFrame {
                         .addComponent(panelTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
                         .addComponent(panelLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 228, Short.MAX_VALUE))))
+                        .addGap(0, 194, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -700,11 +715,11 @@ public class menuUtama extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseEntered
-        btnClose.setBackground(Color.red);
+        btnClose.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnCloseMouseEntered
 
     private void btnCloseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseExited
-        btnClose.setBackground(new Color(102,0,153));
+        btnClose.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnCloseMouseExited
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
@@ -750,123 +765,123 @@ public class menuUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_panelUtamaMouseClicked
 
     private void btnMasterDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterDataMouseEntered
-        btnMasterData.setForeground(Color.red);
-        btnMasterData.setBackground(new Color(0,0,102));
+        btnMasterData.setForeground(Color.white);
+        btnMasterData.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnMasterDataMouseEntered
 
     private void btnMasterDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterDataMouseExited
         btnMasterData.setForeground(Color.white);
-        btnMasterData.setBackground(new Color(0,0,204));
+        btnMasterData.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnMasterDataMouseExited
 
     private void btnTransaksiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTransaksiMouseEntered
-        btnTransaksi.setForeground(Color.red);
-        btnTransaksi.setBackground(new Color(0,0,102));
+        btnTransaksi.setForeground(Color.white);
+        btnTransaksi.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnTransaksiMouseEntered
 
     private void btnTransaksiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTransaksiMouseExited
         btnTransaksi.setForeground(Color.white);
-        btnTransaksi.setBackground(new Color(0,0,204));
+        btnTransaksi.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnTransaksiMouseExited
 
     private void btnLaporanMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaporanMouseEntered
-        btnLaporan.setForeground(Color.red);
-        btnLaporan.setBackground(new Color(0,0,102));
+        btnLaporan.setForeground(Color.white);
+        btnLaporan.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLaporanMouseEntered
 
     private void btnLaporanMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaporanMouseExited
         btnLaporan.setForeground(Color.white);
-        btnLaporan.setBackground(new Color(0,0,204));
+        btnLaporan.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLaporanMouseExited
 
     private void btnDataBarangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseEntered
-        btnDataBarang.setForeground(Color.red);
-        btnDataBarang.setBackground(new Color(0,0,102));
+        btnDataBarang.setForeground(Color.white);
+        btnDataBarang.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnDataBarangMouseEntered
 
     private void btnDataBarangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseExited
         btnDataBarang.setForeground(Color.white);
-        btnDataBarang.setBackground(new Color(0,0,204));
+        btnDataBarang.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnDataBarangMouseExited
 
     private void btnDataSupplierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseEntered
-        btnDataSupplier.setForeground(Color.red);
-        btnDataSupplier.setBackground(new Color(0,0,102));
+        btnDataSupplier.setForeground(Color.white);
+        btnDataSupplier.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnDataSupplierMouseEntered
 
     private void btnDataSupplierMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseExited
         btnDataSupplier.setForeground(Color.white);
-        btnDataSupplier.setBackground(new Color(0,0,204));
+        btnDataSupplier.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnDataSupplierMouseExited
 
     private void btnDataGudangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataGudangMouseEntered
-        btnDataGudang.setForeground(Color.red);
-        btnDataGudang.setBackground(new Color(0,0,102));
+        btnDataGudang.setForeground(Color.white);
+        btnDataGudang.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnDataGudangMouseEntered
 
     private void btnDataGudangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataGudangMouseExited
         btnDataGudang.setForeground(Color.white);
-        btnDataGudang.setBackground(new Color(0,0,204));
+        btnDataGudang.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnDataGudangMouseExited
 
     private void btnDataKategoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKategoriMouseEntered
-        btnDataKategori.setForeground(Color.red);
-        btnDataKategori.setBackground(new Color(0,0,102));
+        btnDataKategori.setForeground(Color.white);
+        btnDataKategori.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnDataKategoriMouseEntered
 
     private void btnDataKategoriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKategoriMouseExited
         btnDataKategori.setForeground(Color.white);
-        btnDataKategori.setBackground(new Color(0,0,204));
+        btnDataKategori.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnDataKategoriMouseExited
 
     private void btnBarangMasukMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBarangMasukMouseEntered
-        btnBarangMasuk.setForeground(Color.red);
-        btnBarangMasuk.setBackground(new Color(0,0,102));
+        btnBarangMasuk.setForeground(Color.white);
+        btnBarangMasuk.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnBarangMasukMouseEntered
 
     private void btnBarangMasukMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBarangMasukMouseExited
         btnBarangMasuk.setForeground(Color.white);
-        btnBarangMasuk.setBackground(new Color(0,0,204));
+        btnBarangMasuk.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnBarangMasukMouseExited
 
     private void btnBarangKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBarangKeluarMouseEntered
-        btnBarangKeluar.setForeground(Color.red);
-        btnBarangKeluar.setBackground(new Color(0,0,102));
+        btnBarangKeluar.setForeground(Color.white);
+        btnBarangKeluar.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnBarangKeluarMouseEntered
 
     private void btnBarangKeluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBarangKeluarMouseExited
         btnBarangKeluar.setForeground(Color.white);
-        btnBarangKeluar.setBackground(new Color(0,0,204));
+        btnBarangKeluar.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnBarangKeluarMouseExited
 
     private void btnLapBarangMasukMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapBarangMasukMouseEntered
-        btnLapBarangMasuk.setForeground(Color.red);
-        btnLapBarangMasuk.setBackground(new Color(0,0,102));
+        btnLapBarangMasuk.setForeground(Color.white);
+        btnLapBarangMasuk.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLapBarangMasukMouseEntered
 
     private void btnLapBarangMasukMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapBarangMasukMouseExited
         btnLapBarangMasuk.setForeground(Color.white);
-        btnLapBarangMasuk.setBackground(new Color(0,0,204));
+        btnLapBarangMasuk.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLapBarangMasukMouseExited
 
     private void btnLapBarangKeluarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapBarangKeluarMouseEntered
-        btnLapBarangKeluar.setForeground(Color.red);
-        btnLapBarangKeluar.setBackground(new Color(0,0,102));
+        btnLapBarangKeluar.setForeground(Color.white);
+        btnLapBarangKeluar.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLapBarangKeluarMouseEntered
 
     private void btnLapBarangKeluarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapBarangKeluarMouseExited
         btnLapBarangKeluar.setForeground(Color.white);
-        btnLapBarangKeluar.setBackground(new Color(0,0,204));
+        btnLapBarangKeluar.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLapBarangKeluarMouseExited
 
     private void btnLapStokBarangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapStokBarangMouseEntered
-        btnLapStokBarang.setForeground(Color.red);
-        btnLapStokBarang.setBackground(new Color(0,0,102));
+        btnLapStokBarang.setForeground(Color.white);
+        btnLapStokBarang.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLapStokBarangMouseEntered
 
     private void btnLapStokBarangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapStokBarangMouseExited
         btnLapStokBarang.setForeground(Color.white);
-        btnLapStokBarang.setBackground(new Color(0,0,204));
+        btnLapStokBarang.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLapStokBarangMouseExited
 
     private void btnDataKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataKategoriActionPerformed
@@ -939,13 +954,13 @@ public class menuUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLapStokBarangActionPerformed
 
     private void btnAboutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAboutMouseEntered
-        btnAbout.setForeground(Color.red);
-        btnAbout.setBackground(new Color(0,0,102));
+        btnAbout.setForeground(Color.white);
+        btnAbout.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnAboutMouseEntered
 
     private void btnAboutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAboutMouseExited
         btnAbout.setForeground(Color.white);
-        btnAbout.setBackground(new Color(0,0,204));
+        btnAbout.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnAboutMouseExited
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
@@ -953,19 +968,27 @@ public class menuUtama extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void btnLapDataSupplierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapDataSupplierMouseEntered
-        btnLapDataSupplier.setForeground(Color.red);
-        btnLapDataSupplier.setBackground(new Color(0,0,102));
+        btnLapDataSupplier.setForeground(Color.white);
+        btnLapDataSupplier.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLapDataSupplierMouseEntered
 
     private void btnLapDataSupplierMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapDataSupplierMouseExited
         btnLapDataSupplier.setForeground(Color.white);
-        btnLapDataSupplier.setBackground(new Color(0,0,204));
+        btnLapDataSupplier.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLapDataSupplierMouseExited
 
     private void btnLapDataSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLapDataSupplierActionPerformed
         panelLaporan.setVisible(false);
         new laporanDataSupplier(this, rootPaneCheckingEnabled).show();
     }//GEN-LAST:event_btnLapDataSupplierActionPerformed
+
+    private void btnTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTransaksiActionPerformed
+
+    private void btnMasterDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasterDataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMasterDataActionPerformed
 
     /**
      * @param args the command line arguments

@@ -44,7 +44,7 @@ public class login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setBackground(new java.awt.Color(209, 17, 17));
 
         lbUsername.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbUsername.setForeground(new java.awt.Color(255, 255, 255));
@@ -54,25 +54,23 @@ public class login extends javax.swing.JFrame {
         lbPassword.setForeground(new java.awt.Color(255, 255, 255));
         lbPassword.setText("Password");
 
-        txtUsername.setBackground(new java.awt.Color(0, 0, 204));
         txtUsername.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtUsername.setBorder(null);
+        txtUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtUsername.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtUsernameKeyPressed(evt);
             }
         });
 
-        txtPassword.setBackground(new java.awt.Color(0, 0, 204));
         txtPassword.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtPassword.setBorder(null);
+        txtPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtPassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtPasswordKeyPressed(evt);
             }
         });
 
-        btnCancel.setBackground(new java.awt.Color(102, 0, 204));
+        btnCancel.setBackground(new java.awt.Color(209, 17, 17));
         btnCancel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnCancel.setText("Cancel");
@@ -92,7 +90,7 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        btnLogin.setBackground(new java.awt.Color(102, 0, 204));
+        btnLogin.setBackground(new java.awt.Color(209, 17, 17));
         btnLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
@@ -163,9 +161,9 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(102, 0, 153));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
 
-        btnClose.setBackground(new java.awt.Color(102, 0, 153));
+        btnClose.setBackground(new java.awt.Color(209, 17, 17));
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Delete_30px_4.png"))); // NOI18N
         btnClose.setContentAreaFilled(false);
         btnClose.setOpaque(true);
@@ -228,11 +226,11 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseEntered
-        btnClose.setBackground(Color.red);
+        btnClose.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnCloseMouseEntered
 
     private void btnCloseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseExited
-        btnClose.setBackground(new Color(102,0,153));
+        btnClose.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnCloseMouseExited
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -240,11 +238,11 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCancelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseEntered
-        btnCancel.setBackground(Color.red);
+        btnCancel.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnCancelMouseEntered
 
     private void btnCancelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelMouseExited
-        btnCancel.setBackground(new Color(102,0,204));
+        btnCancel.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnCancelMouseExited
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
@@ -252,11 +250,11 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCloseActionPerformed
 
     private void btnLoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseEntered
-        btnLogin.setBackground(new Color(0,255,0));
+        btnLogin.setBackground(new Color(155,43,43));
     }//GEN-LAST:event_btnLoginMouseEntered
 
     private void btnLoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseExited
-        btnLogin.setBackground(new Color(102,0,204));
+        btnLogin.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLoginMouseExited
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed

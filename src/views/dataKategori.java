@@ -183,7 +183,7 @@ public class dataKategori extends javax.swing.JDialog {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        panelHeader.setBackground(new java.awt.Color(204, 102, 255));
+        panelHeader.setBackground(new java.awt.Color(209, 17, 17));
         panelHeader.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 panelHeaderMouseDragged(evt);
@@ -195,7 +195,7 @@ public class dataKategori extends javax.swing.JDialog {
             }
         });
 
-        btnClose.setBackground(new java.awt.Color(204, 102, 255));
+        btnClose.setBackground(new java.awt.Color(209, 17, 17));
         btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8_Delete_30px_4.png"))); // NOI18N
         btnClose.setContentAreaFilled(false);
         btnClose.setOpaque(true);
