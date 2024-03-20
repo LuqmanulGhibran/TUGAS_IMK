@@ -73,12 +73,9 @@ public class menuUtama extends javax.swing.JFrame {
         tgl = new javax.swing.JLabel();
         jam = new javax.swing.JLabel();
         jPanel1 = new views.background();
-        btnAbout = new javax.swing.JButton();
         panelMasterData = new javax.swing.JPanel();
         btnDataBarang = new javax.swing.JButton();
         btnDataSupplier = new javax.swing.JButton();
-        btnDataGudang = new javax.swing.JButton();
-        btnDataKategori = new javax.swing.JButton();
         panelTransaksi = new javax.swing.JPanel();
         btnBarangMasuk = new javax.swing.JButton();
         btnBarangKeluar = new javax.swing.JButton();
@@ -86,7 +83,6 @@ public class menuUtama extends javax.swing.JFrame {
         btnLapBarangMasuk = new javax.swing.JButton();
         btnLapBarangKeluar = new javax.swing.JButton();
         btnLapStokBarang = new javax.swing.JButton();
-        btnLapDataSupplier = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -183,7 +179,7 @@ public class menuUtama extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        panelMenu.setBackground(new java.awt.Color(209, 17, 17));
+        panelMenu.setBackground(new java.awt.Color(255, 255, 255));
 
         btnMasterData.setBackground(new java.awt.Color(209, 17, 17));
         btnMasterData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -308,30 +304,6 @@ public class menuUtama extends javax.swing.JFrame {
             .addGap(0, 88, Short.MAX_VALUE)
         );
 
-        btnAbout.setBackground(new java.awt.Color(209, 17, 17));
-        btnAbout.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnAbout.setForeground(new java.awt.Color(255, 255, 255));
-        btnAbout.setText("  About");
-        btnAbout.setBorder(null);
-        btnAbout.setContentAreaFilled(false);
-        btnAbout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAbout.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnAbout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAbout.setOpaque(true);
-        btnAbout.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAboutMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAboutMouseExited(evt);
-            }
-        });
-        btnAbout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAboutActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
@@ -341,8 +313,7 @@ public class menuUtama extends javax.swing.JFrame {
                     .addComponent(btnMasterData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                     .addComponent(btnTransaksi, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                     .addComponent(btnLaporan, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                    .addComponent(panelJam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAbout, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
+                    .addComponent(panelJam, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -358,9 +329,7 @@ public class menuUtama extends javax.swing.JFrame {
                 .addComponent(btnTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(panelJam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -416,62 +385,12 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnDataGudang.setBackground(new java.awt.Color(209, 17, 17));
-        btnDataGudang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnDataGudang.setForeground(new java.awt.Color(255, 255, 255));
-        btnDataGudang.setText("  > Data Gudang");
-        btnDataGudang.setBorder(null);
-        btnDataGudang.setContentAreaFilled(false);
-        btnDataGudang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnDataGudang.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDataGudang.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDataGudang.setOpaque(true);
-        btnDataGudang.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDataGudangMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnDataGudangMouseExited(evt);
-            }
-        });
-        btnDataGudang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataGudangActionPerformed(evt);
-            }
-        });
-
-        btnDataKategori.setBackground(new java.awt.Color(209, 17, 17));
-        btnDataKategori.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnDataKategori.setForeground(new java.awt.Color(255, 255, 255));
-        btnDataKategori.setText("  > Data Kategori");
-        btnDataKategori.setBorder(null);
-        btnDataKategori.setContentAreaFilled(false);
-        btnDataKategori.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnDataKategori.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnDataKategori.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDataKategori.setOpaque(true);
-        btnDataKategori.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDataKategoriMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnDataKategoriMouseExited(evt);
-            }
-        });
-        btnDataKategori.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDataKategoriActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelMasterDataLayout = new javax.swing.GroupLayout(panelMasterData);
         panelMasterData.setLayout(panelMasterDataLayout);
         panelMasterDataLayout.setHorizontalGroup(
             panelMasterDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnDataBarang, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
             .addComponent(btnDataSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnDataGudang, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnDataKategori, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
         );
         panelMasterDataLayout.setVerticalGroup(
             panelMasterDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -480,10 +399,7 @@ public class menuUtama extends javax.swing.JFrame {
                 .addComponent(btnDataBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnDataSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnDataGudang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnDataKategori, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         panelTransaksi.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -625,30 +541,6 @@ public class menuUtama extends javax.swing.JFrame {
             }
         });
 
-        btnLapDataSupplier.setBackground(new java.awt.Color(209, 17, 17));
-        btnLapDataSupplier.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        btnLapDataSupplier.setForeground(new java.awt.Color(255, 255, 255));
-        btnLapDataSupplier.setText("  > Laporan Data Supplier");
-        btnLapDataSupplier.setBorder(null);
-        btnLapDataSupplier.setContentAreaFilled(false);
-        btnLapDataSupplier.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnLapDataSupplier.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnLapDataSupplier.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLapDataSupplier.setOpaque(true);
-        btnLapDataSupplier.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnLapDataSupplierMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnLapDataSupplierMouseExited(evt);
-            }
-        });
-        btnLapDataSupplier.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLapDataSupplierActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelLaporanLayout = new javax.swing.GroupLayout(panelLaporan);
         panelLaporan.setLayout(panelLaporanLayout);
         panelLaporanLayout.setHorizontalGroup(
@@ -656,7 +548,6 @@ public class menuUtama extends javax.swing.JFrame {
             .addComponent(btnLapBarangKeluar, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
             .addComponent(btnLapBarangMasuk, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
             .addComponent(btnLapStokBarang, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addComponent(btnLapDataSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
         );
         panelLaporanLayout.setVerticalGroup(
             panelLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -666,8 +557,7 @@ public class menuUtama extends javax.swing.JFrame {
                 .addComponent(btnLapBarangKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btnLapStokBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(btnLapDataSupplier, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout panelUtamaLayout = new javax.swing.GroupLayout(panelUtama);
@@ -681,13 +571,13 @@ public class menuUtama extends javax.swing.JFrame {
                     .addComponent(panelMasterData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1021, Short.MAX_VALUE))
+                .addContainerGap(1012, Short.MAX_VALUE))
         );
         panelUtamaLayout.setVerticalGroup(
             panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelUtamaLayout.createSequentialGroup()
                 .addComponent(panelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(0, 0, 0)
                 .addGroup(panelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelUtamaLayout.createSequentialGroup()
@@ -696,7 +586,7 @@ public class menuUtama extends javax.swing.JFrame {
                         .addComponent(panelTransaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
                         .addComponent(panelLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 194, Short.MAX_VALUE))))
+                        .addGap(0, 231, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -753,11 +643,6 @@ public class menuUtama extends javax.swing.JFrame {
         panelMasterData.setVisible(false);
     }//GEN-LAST:event_btnLaporanMouseClicked
 
-    private void btnDataBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataBarangActionPerformed
-        panelMasterData.setVisible(false);
-        new dataBarang(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnDataBarangActionPerformed
-
     private void panelUtamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelUtamaMouseClicked
         panelMasterData.setVisible(false);
         panelTransaksi.setVisible(false);
@@ -793,46 +678,6 @@ public class menuUtama extends javax.swing.JFrame {
         btnLaporan.setForeground(Color.white);
         btnLaporan.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLaporanMouseExited
-
-    private void btnDataBarangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseEntered
-        btnDataBarang.setForeground(Color.white);
-        btnDataBarang.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnDataBarangMouseEntered
-
-    private void btnDataBarangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseExited
-        btnDataBarang.setForeground(Color.white);
-        btnDataBarang.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnDataBarangMouseExited
-
-    private void btnDataSupplierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseEntered
-        btnDataSupplier.setForeground(Color.white);
-        btnDataSupplier.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnDataSupplierMouseEntered
-
-    private void btnDataSupplierMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseExited
-        btnDataSupplier.setForeground(Color.white);
-        btnDataSupplier.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnDataSupplierMouseExited
-
-    private void btnDataGudangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataGudangMouseEntered
-        btnDataGudang.setForeground(Color.white);
-        btnDataGudang.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnDataGudangMouseEntered
-
-    private void btnDataGudangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataGudangMouseExited
-        btnDataGudang.setForeground(Color.white);
-        btnDataGudang.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnDataGudangMouseExited
-
-    private void btnDataKategoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKategoriMouseEntered
-        btnDataKategori.setForeground(Color.white);
-        btnDataKategori.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnDataKategoriMouseEntered
-
-    private void btnDataKategoriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataKategoriMouseExited
-        btnDataKategori.setForeground(Color.white);
-        btnDataKategori.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnDataKategoriMouseExited
 
     private void btnBarangMasukMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBarangMasukMouseEntered
         btnBarangMasuk.setForeground(Color.white);
@@ -884,11 +729,6 @@ public class menuUtama extends javax.swing.JFrame {
         btnLapStokBarang.setBackground(new Color(209,17,17));
     }//GEN-LAST:event_btnLapStokBarangMouseExited
 
-    private void btnDataKategoriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataKategoriActionPerformed
-        panelMasterData.setVisible(false);
-        new dataKategori(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnDataKategoriActionPerformed
-
     private void btnMaximizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMaximizeMouseClicked
         if(maximixed){
             menuUtama.this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -918,16 +758,6 @@ public class menuUtama extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_labelNamaMouseDragged
 
-    private void btnDataGudangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataGudangActionPerformed
-        panelMasterData.setVisible(false);
-        new dataGudang(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnDataGudangActionPerformed
-
-    private void btnDataSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataSupplierActionPerformed
-        panelMasterData.setVisible(false);
-        new dataSupplier(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnDataSupplierActionPerformed
-
     private void btnBarangMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBarangMasukActionPerformed
         panelTransaksi.setVisible(false);
         new transaksiBarangMasuk(this, rootPaneCheckingEnabled).show();
@@ -953,35 +783,6 @@ public class menuUtama extends javax.swing.JFrame {
         new laporanStokBarang(this, rootPaneCheckingEnabled).show();
     }//GEN-LAST:event_btnLapStokBarangActionPerformed
 
-    private void btnAboutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAboutMouseEntered
-        btnAbout.setForeground(Color.white);
-        btnAbout.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnAboutMouseEntered
-
-    private void btnAboutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAboutMouseExited
-        btnAbout.setForeground(Color.white);
-        btnAbout.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnAboutMouseExited
-
-    private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
-        new about(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnAboutActionPerformed
-
-    private void btnLapDataSupplierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapDataSupplierMouseEntered
-        btnLapDataSupplier.setForeground(Color.white);
-        btnLapDataSupplier.setBackground(new Color(155,43,43));
-    }//GEN-LAST:event_btnLapDataSupplierMouseEntered
-
-    private void btnLapDataSupplierMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLapDataSupplierMouseExited
-        btnLapDataSupplier.setForeground(Color.white);
-        btnLapDataSupplier.setBackground(new Color(209,17,17));
-    }//GEN-LAST:event_btnLapDataSupplierMouseExited
-
-    private void btnLapDataSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLapDataSupplierActionPerformed
-        panelLaporan.setVisible(false);
-        new laporanDataSupplier(this, rootPaneCheckingEnabled).show();
-    }//GEN-LAST:event_btnLapDataSupplierActionPerformed
-
     private void btnTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransaksiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTransaksiActionPerformed
@@ -989,6 +790,36 @@ public class menuUtama extends javax.swing.JFrame {
     private void btnMasterDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMasterDataActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMasterDataActionPerformed
+
+    private void btnDataSupplierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataSupplierActionPerformed
+        panelMasterData.setVisible(false);
+        new dataSupplier(this, rootPaneCheckingEnabled).show();
+    }//GEN-LAST:event_btnDataSupplierActionPerformed
+
+    private void btnDataSupplierMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseExited
+        btnDataSupplier.setForeground(Color.white);
+        btnDataSupplier.setBackground(new Color(209,17,17));
+    }//GEN-LAST:event_btnDataSupplierMouseExited
+
+    private void btnDataSupplierMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataSupplierMouseEntered
+        btnDataSupplier.setForeground(Color.white);
+        btnDataSupplier.setBackground(new Color(155,43,43));
+    }//GEN-LAST:event_btnDataSupplierMouseEntered
+
+    private void btnDataBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataBarangActionPerformed
+        panelMasterData.setVisible(false);
+        new dataBarang(this, rootPaneCheckingEnabled).show();
+    }//GEN-LAST:event_btnDataBarangActionPerformed
+
+    private void btnDataBarangMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseExited
+        btnDataBarang.setForeground(Color.white);
+        btnDataBarang.setBackground(new Color(209,17,17));
+    }//GEN-LAST:event_btnDataBarangMouseExited
+
+    private void btnDataBarangMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDataBarangMouseEntered
+        btnDataBarang.setForeground(Color.white);
+        btnDataBarang.setBackground(new Color(155,43,43));
+    }//GEN-LAST:event_btnDataBarangMouseEntered
 
     /**
      * @param args the command line arguments
@@ -1028,17 +859,13 @@ public class menuUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbout;
     private javax.swing.JButton btnBarangKeluar;
     private javax.swing.JButton btnBarangMasuk;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnDataBarang;
-    private javax.swing.JButton btnDataGudang;
-    private javax.swing.JButton btnDataKategori;
     private javax.swing.JButton btnDataSupplier;
     private javax.swing.JButton btnLapBarangKeluar;
     private javax.swing.JButton btnLapBarangMasuk;
-    private javax.swing.JButton btnLapDataSupplier;
     private javax.swing.JButton btnLapStokBarang;
     private javax.swing.JButton btnLaporan;
     private javax.swing.JButton btnMasterData;
