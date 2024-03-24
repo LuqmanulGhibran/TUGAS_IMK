@@ -65,7 +65,7 @@ public class laporanBarangKeluar extends javax.swing.JDialog {
     
     
     public void dataTable(){
-        Object[] Baris = {"No","Tanggal","ID BK","Gudang","Kode Part","Nama Part","Qty","Keterangan"};
+        Object[] Baris = {"No","Tanggal","ID BK","Kode Barang","Nama Barang","Qty","Keterangan"};
         tabmode = new DefaultTableModel(null, Baris);
         tabelBarangKeluar.setModel(tabmode);   
     }
@@ -82,18 +82,16 @@ public class laporanBarangKeluar extends javax.swing.JDialog {
         column = tabelBarangKeluar.getColumnModel().getColumn(3);
         column.setPreferredWidth(200);
         column = tabelBarangKeluar.getColumnModel().getColumn(4);
-        column.setPreferredWidth(100);
-        column = tabelBarangKeluar.getColumnModel().getColumn(5);
         column.setPreferredWidth(250); 
-        column = tabelBarangKeluar.getColumnModel().getColumn(6);
+        column = tabelBarangKeluar.getColumnModel().getColumn(5);
         column.setPreferredWidth(70);
-        column = tabelBarangKeluar.getColumnModel().getColumn(7);
-        column.setPreferredWidth(300);
+        column = tabelBarangKeluar.getColumnModel().getColumn(6);
+        column.setPreferredWidth(400);
     }
     
 
     public void pencarian(String sql){
-        Object[] Baris = {"No","Tanggal","ID BK","Gudang","Kode Part","Nama Part","Qty","Keterangan"};
+        Object[] Baris = {"No","Tanggal","ID BK","Kode Barang","Nama Barang","Qty","Keterangan"};
         tabmode = new DefaultTableModel(null, Baris);
         tabelBarangKeluar.setModel(tabmode);
         int brs = tabelBarangKeluar.getRowCount();
@@ -106,12 +104,11 @@ public class laporanBarangKeluar extends javax.swing.JDialog {
             while (hasil.next()){
                 String tanggal = hasil.getString("tanggal");
                 String id_bk = hasil.getString("id_bk");
-                String gudang = hasil.getString("gudang");
                 String kode_part = hasil.getString("kode_part");
                 String nama_part = hasil.getString("nama_part");
                 String jumlah = hasil.getString("jumlah");
                 String keterangan = hasil.getString("keterangan");
-                String[] data = {"",tanggal,id_bk,gudang,kode_part,nama_part,jumlah,keterangan};
+                String[] data = {"",tanggal,id_bk,kode_part,nama_part,jumlah,keterangan};
                 tabmode.addRow(data);
                 noTable();
             }
@@ -457,12 +454,11 @@ public class laporanBarangKeluar extends javax.swing.JDialog {
             while (hasil.next()){
                 String tanggal = hasil.getString("tanggal");
                 String id_bk = hasil.getString("id_bk");
-                String gudang = hasil.getString("gudang");
                 String kode_part = hasil.getString("kode_part");
                 String nama_part = hasil.getString("nama_part");
                 String jumlah = hasil.getString("jumlah");
                 String keterangan = hasil.getString("keterangan");
-                String[] data = {"",tanggal,id_bk,gudang,kode_part,nama_part,jumlah,keterangan};
+                String[] data = {"",tanggal,id_bk,kode_part,nama_part,jumlah,keterangan};
                 tabmode.addRow(data);
                 noTable();
                 lebarKolom();

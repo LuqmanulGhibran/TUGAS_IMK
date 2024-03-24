@@ -62,7 +62,7 @@ public class laporanStokBarang extends javax.swing.JDialog {
     }
     
     public void dataTable(){
-        Object[] Baris = {"No","Tanggal","Kode Part","Nama Part","Kategori","Qty","Keterangan"};
+        Object[] Baris = {"No","Tanggal","Kode Barang","Nama Barang","Kategori","Qty","Keterangan"};
         tabmode = new DefaultTableModel(null, Baris);
         tabelBarang.setModel(tabmode);
         String tampilan = "dd-MM-yyyy";
@@ -108,7 +108,7 @@ public class laporanStokBarang extends javax.swing.JDialog {
     }
     
     public void pencarian(String sql){
-        Object[] Baris = {"No","Tanggal","Kode Part","Nama Part","Kategori","Qty","Keterangan"};
+        Object[] Baris = {"No","Tanggal","Kode Barang","Nama Barang","Kategori","Qty","Keterangan"};
         tabmode = new DefaultTableModel(null, Baris);
         tabelBarang.setModel(tabmode);
         int brs = tabelBarang.getRowCount();
