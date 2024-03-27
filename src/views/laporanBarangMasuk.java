@@ -471,7 +471,7 @@ public class laporanBarangMasuk extends javax.swing.JDialog {
     private void btnCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakActionPerformed
         try {
             Connection konn = new koneksi().connect();
-            File file = new File("C:/imk/laporan/laporanBM.jrxml");
+            File file = new File("src/laporan/laporanBM.jrxml");
             String tampilan = "dd-MM-yyyy";
             SimpleDateFormat fm = new SimpleDateFormat(tampilan);
             String tanggalAwal = String.valueOf(fm.format(tglAwal.getDate()));

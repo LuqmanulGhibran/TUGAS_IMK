@@ -13,7 +13,6 @@
 		<![CDATA[SELECT
      tb_detail_brg_keluar.`tanggal` AS tb_detail_brg_keluar_tanggal,
      tb_detail_brg_keluar.`id_bk` AS tb_detail_brg_keluar_id_bk,
-     tb_detail_brg_keluar.`gudang` AS tb_detail_brg_keluar_gudang,
      tb_detail_brg_keluar.`kode_part` AS tb_detail_brg_keluar_kode_part,
      tb_detail_brg_keluar.`nama_part` AS tb_detail_brg_keluar_nama_part,
      tb_detail_brg_keluar.`jumlah` AS tb_detail_brg_keluar_jumlah,
@@ -25,7 +24,6 @@ WHERE
 	</queryString>
 	<field name="tb_detail_brg_keluar_tanggal" class="java.lang.String"/>
 	<field name="tb_detail_brg_keluar_id_bk" class="java.lang.String"/>
-	<field name="tb_detail_brg_keluar_gudang" class="java.lang.String"/>
 	<field name="tb_detail_brg_keluar_kode_part" class="java.lang.String"/>
 	<field name="tb_detail_brg_keluar_nama_part" class="java.lang.String"/>
 	<field name="tb_detail_brg_keluar_jumlah" class="java.lang.Integer"/>
@@ -44,14 +42,14 @@ WHERE
 			</staticText>
 			<image>
 				<reportElement x="446" y="0" width="107" height="55" uuid="0c66d736-1cd8-47dc-b89f-ca877e223b17"/>
-				<imageExpression><![CDATA["C:\\focon\\src\\images\\logo2.png"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\Users\\Telkom Akses Ghibran\\Documents\\kuliah\\IMK\\Tugas\\Project_Clone\\src\\images\\logo_ta.png"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement style="Title" x="131" y="0" width="264" height="33" uuid="b43dc64c-3fe6-4a0e-bba5-e0efa5fe7fd9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="20"/>
 				</textElement>
-				<text><![CDATA[PT Focon Indo Beton]]></text>
+				<text><![CDATA[PT Telkom Akses]]></text>
 			</staticText>
 			<line>
 				<reportElement x="1" y="71" width="553" height="1" uuid="1d51c4a8-0da1-4a43-9158-b926eb15175e"/>
@@ -88,7 +86,7 @@ WHERE
 				<textElement>
 					<font size="11"/>
 				</textElement>
-				<text><![CDATA[Kode Part]]></text>
+				<text><![CDATA[Kode Barang]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="1" y="4" width="22" height="15" uuid="c71ffb0a-348e-4858-bb64-ece116e789f4"/>
@@ -109,7 +107,7 @@ WHERE
 				<textElement>
 					<font size="11"/>
 				</textElement>
-				<text><![CDATA[Nama Part]]></text>
+				<text><![CDATA[Nama Barang]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="Column header" x="23" y="4" width="62" height="15" uuid="bc9bc368-9d00-4905-872c-9404e1acd41f"/>
@@ -117,13 +115,6 @@ WHERE
 					<font size="11"/>
 				</textElement>
 				<text><![CDATA[Tanggal]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="Column header" x="149" y="4" width="92" height="15" uuid="bb6d651b-4f54-43d3-94bb-e7ef78b0d285"/>
-				<textElement>
-					<font size="11"/>
-				</textElement>
-				<text><![CDATA[Gudang]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -148,13 +139,6 @@ WHERE
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tb_detail_brg_keluar_id_bk}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement style="Detail" x="149" y="0" width="92" height="15" uuid="a5800a9b-3389-4f44-9dd6-728b1070589d"/>
-				<textElement>
-					<font size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tb_detail_brg_keluar_gudang}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement style="Detail" x="253" y="0" width="77" height="15" uuid="82f9b374-0ef2-49cd-b2dc-e982a4816e02"/>
