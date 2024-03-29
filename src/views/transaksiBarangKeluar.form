@@ -703,9 +703,12 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Part"/>
+            <Property name="text" type="java.lang.String" value="Search"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Search"/>
+          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JLabel" name="labelNamaBarang2">
           <Properties>

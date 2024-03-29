@@ -90,7 +90,7 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
     private void autoIdBK(){
      try{
          Connection con = new koneksi().connect();
-         java.sql.Statement stat = con.createStatement();
+         java.sql.Statement stat = conn.createStatement();
          String sql = "select max(right (id_bk,6)) as no from tb_brg_keluar";
          ResultSet res = stat.executeQuery(sql);
          while(res.next()){
@@ -118,7 +118,7 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
     private void autoIdBK_DT(){
      try{
          Connection con = new koneksi().connect();
-         java.sql.Statement stat = con.createStatement();
+         java.sql.Statement stat = conn.createStatement();
          String sql = "select max(right (id_detail_bk,4)) as no from tb_detail_brg_keluar";
          ResultSet res = stat.executeQuery(sql);
          while(res.next()){
@@ -229,7 +229,7 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
         column2 = tabelBarang.getColumnModel().getColumn(0);
         column2.setPreferredWidth(80);
         column2 = tabelBarang.getColumnModel().getColumn(1);
-        column2.setPreferredWidth(215);
+        column2.setPreferredWidth(413);
     }
     
 //     public void lebarKolom3(){
@@ -711,7 +711,7 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Part");
+        jLabel2.setText("Search");
         jLabel2.setOpaque(true);
 
         labelNamaBarang2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -899,6 +899,8 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
+        jLabel2.getAccessibleContext().setAccessibleName("Search");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -957,7 +959,6 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
         String f = tabmode.getValueAt(bar, 5).toString();
         String g = tabmode.getValueAt(bar, 6).toString();
         String h = tabmode.getValueAt(bar, 7).toString();
-        String i = tabmode.getValueAt(bar, 7).toString();
 
         SimpleDateFormat date = new SimpleDateFormat("dd-MM-yyyy");
         Date dateValue = null;
@@ -970,10 +971,10 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
         btnPilihTanggal.setDate(dateValue);
         txtIdDetailBarangKeluar.setText(c);
         txtIdBarangKeluar.setText(d);
-        txtKodePart.setText(f);
-        txtNamaPart.setText(g);
-        txtJumlahBarang.setText(h);
-        txtKeterangan.setText(i);
+        txtKodePart.setText(e);
+        txtNamaPart.setText(f);
+        txtJumlahBarang.setText(g);
+        txtKeterangan.setText(h);
         aktif();
     }//GEN-LAST:event_tabelBarangKeluarMouseClicked
 
@@ -1141,6 +1142,18 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnTambahMouseExited
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        String jumlah = "0";
+        String sql_jumlah = "select * from tb_barang where kode_part = '"+txtKodePart.getText()+"'";
+        try {
+            java.sql.Statement stat = conn.createStatement();
+            ResultSet hasil = stat.executeQuery(sql_jumlah);
+            while (hasil.next()){
+                System.out.println(Integer.parseInt(jumlah));
+                jumlah = hasil.getString("jumlah");
+                System.out.println(Integer.parseInt(jumlah));
+            }
+        } catch (Exception e) {
+        }
         if(txtIdBarangKeluar.getText().equals("")){
             JOptionPane.showMessageDialog(null, "ID BK tidak boleh kosong");
             txtIdBarangKeluar.requestFocus();
@@ -1153,34 +1166,60 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
         } else if (txtJumlahBarang.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Qty tidak boleh kosong");
             txtJumlahBarang.requestFocus();
+        } else if (Integer.parseInt(jumlah) < Integer.parseInt(txtJumlahBarang.getText())) {
+            System.out.println(Integer.parseInt(jumlah));
+            System.out.println(Integer.parseInt(txtJumlahBarang.getText()));
+            JOptionPane.showMessageDialog(null, "Barang Tidak Mencukupi");
+            txtJumlahBarang.requestFocus();
         } else {
-        String sql = "insert into tb_detail_brg_keluar values (?,?,?,?,?,?,?,?)";
-        String tampilan = "dd-MM-yyyy";
-        SimpleDateFormat fm = new SimpleDateFormat(tampilan);
-        String tanggal = String.valueOf(fm.format(btnPilihTanggal.getDate()));
-        try {
-            PreparedStatement stat = conn.prepareStatement(sql);
-            stat.setString(1, tanggal.toString());
-            stat.setString(2, txtIdDetailBarangKeluar.getText());
-            stat.setString(3, txtIdBarangKeluar.getText());
-            stat.setString(4, "");
-            stat.setString(5, txtKodePart.getText());
-            stat.setString(6, txtNamaPart.getText());
-            stat.setString(7, txtJumlahBarang.getText());
-            stat.setString(8, txtKeterangan.getText());
-            stat.executeUpdate();
-            JOptionPane.showMessageDialog(null,"Data Berhasil Ditambah");
-            //            String refresh = "select * from tb_barang";
-            autoIdBK();
-            autoIdBK_DT();
-            kosong2();
-            dataTable();
-            lebarKolom();
-            txtIdBarangKeluar.setEnabled(false);
-            txtKodePart.requestFocus();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Data Gagal Ditambah"+e);
-        }
+            String sql = "insert into tb_brg_keluar values (?,?,?,?)";
+            String tampilan = "dd-MM-yyyy";
+            SimpleDateFormat fm = new SimpleDateFormat(tampilan);
+            String tanggal = String.valueOf(fm.format(btnPilihTanggal.getDate()));
+            try {
+                PreparedStatement stat = conn.prepareStatement(sql);
+                stat.setString(1, tanggal.toString());
+                stat.setString(2, txtIdBarangKeluar.getText());
+                stat.setString(3, "");
+                stat.setString(4, txtKeterangan.getText());
+                stat.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Data Berhasil Disimpan");
+                //            String refresh = "select * from tb_barang";
+                // kosong();
+                // autoIdBK();
+                // autoIdBK_DT();
+                // dataTable();
+                // lebarKolom();
+                // txtIdBarangKeluar.setEnabled(true);
+                // txtGudang.setEnabled(true);
+                // txtIdBarangKeluar.requestFocus();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Data Gagal Disimpan"+e);
+            }
+            String sql_dt = "insert into tb_detail_brg_keluar values (?,?,?,?,?,?,?,?)";
+            try {
+                PreparedStatement stat = conn.prepareStatement(sql_dt);
+                stat.setString(1, tanggal.toString());
+                stat.setString(2, txtIdDetailBarangKeluar.getText());
+                stat.setString(3, txtIdBarangKeluar.getText());
+                stat.setString(4, "");
+                stat.setString(5, txtKodePart.getText());
+                stat.setString(6, txtNamaPart.getText());
+                stat.setString(7, txtJumlahBarang.getText());
+                stat.setString(8, txtKeterangan.getText());
+                stat.executeUpdate();
+                JOptionPane.showMessageDialog(null,"Data Berhasil Ditambah");
+                //            String refresh = "select * from tb_barang";
+                autoIdBK();
+                autoIdBK_DT();
+                kosong2();
+                dataTable();
+                lebarKolom();
+                txtIdBarangKeluar.setEnabled(false);
+                txtKodePart.requestFocus();
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Data Gagal Ditambah"+e);
+            }
         }
     }//GEN-LAST:event_btnTambahActionPerformed
 
@@ -1188,8 +1227,10 @@ public class transaksiBarangKeluar extends javax.swing.JDialog {
         char enter=evt.getKeyChar();
         if(!(Character.isDigit(enter)))
         {
-            evt.consume();
-            JOptionPane.showMessageDialog(null, "Masukan Hanya Angka 0-9", "Input Qty", JOptionPane.ERROR_MESSAGE);
+            if ((int)enter != 8) {
+                evt.consume();
+                JOptionPane.showMessageDialog(null, "Masukan Hanya Angka 0-9", "Input Qty", JOptionPane.ERROR_MESSAGE);
+            }   
         }
     }//GEN-LAST:event_txtJumlahBarangKeyTyped
 
